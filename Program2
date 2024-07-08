@@ -1,1 +1,27 @@
+1. CREATE TABLE Employee (EMPNO INT, ENAME VARCHAR(100),JOB VARCHAR(100),MGR 
 
+INT,SAL DECIMAL(10, 2));
+
+ALTER TABLE Employee ADD COMMISSION DECIMAL(10, 2) CHECK (COMMISSION >= 0 OR 
+
+COMMISSION IS NULL);
+
+2. INSERT INTO Employee (EMPNO, ENAME, JOB, MGR, SAL, COMMISSION) VALUES 
+
+(101, 'John Doe', 'Manager', 100, 75000, 5000),
+
+(102, 'Jane Smith', 'Developer', 101, 60000, 3000),
+
+(103, 'Jim Beam', 'Analyst', 102, 55000, 2500),
+
+(104, 'Jill Hill', 'Salesperson', 103, 45000, 2000),
+
+(105, 'Jack Black', 'Support', 101, 40000, 1500);
+
+3. UPDATE Employee SET JOB = 'Senior Salesperson' WHERE EMPNO = 104;
+
+4. ALTER TABLE Employee RENAME COLUMN MGR TO MANAGER_ID;
+
+5. DELETE FROM Employee WHERE EMPNO = 105;
+
+SELECT * FROM Employee;
