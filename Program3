@@ -1,1 +1,17 @@
+1. CREATE TABLE Employee (E_id INT PRIMARY KEY,E_name VARCHAR(100),Age INT,Salary 
 
+DECIMAL(10, 2));
+
+2. SELECT COUNT(E_name) FROM Employee;
+
+SELECT COUNT(DISTINCT E_name) FROM Employee;
+
+3. SELECT MAX(Age) FROM Employee;
+
+4. SELECT MIN(Age) FROM Employee;
+
+5. SELECT Salary FROM Employee ORDER BY Salary ASC;
+
+6. SELECT Salary, COUNT(*) AS Number_of_Employees FROM Employee GROUP BY Salary ORDER 
+
+BY Salary;
